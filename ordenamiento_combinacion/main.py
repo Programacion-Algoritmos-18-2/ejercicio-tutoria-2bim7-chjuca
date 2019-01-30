@@ -1,9 +1,9 @@
 
-from combinacion import *
+from combinacion import *				#Iportamos los modulos necesarios
 from paquete_archivos.miarchivo import *
 from modelo.Estudiante import*
 
-m = MiArchivo("data.txt")		# Abrimos el archivo txt
+m = MiArchivo("data/data.txt")		# Abrimos el archivo txt
 
 lista = m.obtener_informacion()		# Obtenemos informacion por las lineas
 

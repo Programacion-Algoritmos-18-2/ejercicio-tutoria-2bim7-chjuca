@@ -1,33 +1,23 @@
-"""
-    Ejemplo tomado de 
-    http://www.pythondiario.com/2018/08/ordenamiento-por-mezcla-merge-sort.html
-"""
-
-
 # Función merge_sort
 def merge_sort(lista):
-    """
-        Lo primero que se ve en el psudocódigo es un if que
-        comprueba la longitud de la lista. Si es menor que 2, 1 o 0, se devuelve la lista.
-        ¿Por que? Ya esta ordenada. 
-    """
-    if len(lista) < 2:
-        return lista
+
+    if len(lista) < 2:              # preguntamos si la cantidad de elementos de la lista es menor q 2 ya q es el caso base
+        return lista                # Retornamos la lista
     # De lo contrario, se divide en 2
-    else:
-        middle = len(lista) // 2
-        right = merge_sort(lista[:middle]) # Derecha
-        left = merge_sort(lista[middle:]) #Izquierda
+    else:                                   # Declaramos las variables necesarias para luego enviarlas a la funcion merge 
+        middle = len(lista) // 2            # Dividimos el numero de elementos de la lista para 2
+        right = merge_sort(lista[:middle])  # tomamos los elementos de Derecha
+        left = merge_sort(lista[middle:])   # Tomamos los elementos de Izquierda
         return merge(right, left)
 
 # Función merge
-def merge(lista1, lista2):
+def merge(lista1, lista2):              # Funcion merge que recibe 2 parametros
     """
         merge se encargara de intercalar los elementos de las dos
         divisiones.
     """
-    i, j = 0, 0 # Variables de incremento
-    result = [] # Lista de resultado
+    i, j = 0, 0     # Variables de incremento
+    result = []     # Lista de resultado
 
     # Intercalar ordenadamente
     while(i < len(lista1) and j < len(lista2)):

@@ -1,10 +1,10 @@
-class Estudiante(object):
-	def __init__(self, nombre,apellido,edad):
-		self.nombre = nombre
+class Estudiante(object):						 # Creamos una clase estudiante
+	def __init__(self, nombre,apellido,edad):	 # Costructor de la clase
+		self.nombre = nombre 						# Atributos de la clase
 		self.apellido = apellido
 		self.edad = edad
 
-	def setNombre(self,nombre):
+	def setNombre(self,nombre):					# Metodos SET y GET de la clase 
 		self.nombre = nombre
 
 	def setApellido(self,apellido):
